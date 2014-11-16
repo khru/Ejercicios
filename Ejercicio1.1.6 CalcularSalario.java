@@ -1,13 +1,6 @@
-/**
- * 
- */
-package programación116;
-
 import java.util.Scanner;
-
 /**
  * @author khru
- *
  */
 public class CalcularSalario 
 {
