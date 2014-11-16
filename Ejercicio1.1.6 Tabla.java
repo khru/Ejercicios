@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * @author Emmanuel Valverde Ramos
+ * @author khru
  *
  */
 public class Tabla
