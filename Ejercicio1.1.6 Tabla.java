@@ -1,15 +1,9 @@
 import java.util.Scanner;
-
 /**
  * @author khru
- *
  */
 public class Tabla
 {
-
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) 
 	{
 		Scanner teclado = new Scanner(System.in);
@@ -44,5 +38,4 @@ public class Tabla
 	{
 		System.out.println("El valor introducido no es valido");
 	}
-
 }
