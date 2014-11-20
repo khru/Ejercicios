@@ -1,0 +1,91 @@
+import java.util.Scanner;
+
+/**
+ * @author khru
+ * Un menú que tenga 2 opciones, 
+ * 1 que me diga si el año es bisiesto o no
+ * 2 que diga el año y el mes y con eso mostremos el número de dias que tiene ese mes, incluyendo años bisiestos
+ */
+public class AniosBisiestos 
+{
+	public static void main(String[] args) 
+	{
+		//iniciación de variables
+		int anio,mes, n1= 0,n2,opcion;
+		Scanner teclado = new Scanner(System.in);
+		String salida = " ";
+		String nombreMes = " ";
+		do
+		{
+			System.out.println("+--------------------------+");
+			System.out.println("|   Seleciona una opción   |");
+			System.out.println("+--------------------------+");
+			System.out.println("| 1 - Saber años bisiestos |");
+			System.out.println("| 2 - Días de un mes       |");
+			System.out.println("| 3 - Salir                |");
+			System.out.println("+--------------------------+");
+			System.out.println("Selecione una opción: ");
+			opcion = teclado.nextInt();
+			switch(opcion)
+			{
+				case 1:
+					System.out.println("Introduce un año:  ");
+					n1 = teclado.nextInt();
+					if(n1 > 0)
+					{
+						if(n1 % 4 == 0)
+						{
+							System.out.println("El año es bisiesto");
+						}
+						else
+						{
+							System.out.println("El anño no es bisiesto");
+						}
+					}
+					else
+					{
+						System.out.println("Error parametro erroneo");
+					}
+				break;
+				case 2:
+					System.out.println("Introduce el año: ");
+					n1 = teclado.nextInt();
+					System.out.println("Introduce El nombre del mes: ");
+					nombreMes = new Scanner(System.in).nextLine().toUpperCase();
+					if(n1 > 0)
+					{
+						if(nombreMes.equals("ENERO"))
+						{
+							mes = 31;
+							System.out.println("Enero tiene 31 días");
+						}
+						if(nombreMes.equals("FEBRERO"))
+						{
+							if(n1 % 4 == 0)
+							{
+								mes = 28;
+								System.out.println("Febrero 28 días");
+							}
+							else
+							{
+								mes = 29;
+								System.out.println("Febrero tiene 29 días");
+							}
+						}
+					}
+					else
+					{
+						System.out.println("Opcion erronea");
+					}
+				break;
+				case 3:
+					
+				break;
+				default:
+					System.out.println("Error Parametro erroneo");
+				break;
+			}
+			
+		}while(!salida.equals("S"));
+	}
+}
