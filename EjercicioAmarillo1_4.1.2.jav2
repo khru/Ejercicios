@@ -1,25 +1,33 @@
-/**
- * Este paquete es el de la practica de arrays
- */
 package programación421;
+
+import java.util.Scanner;
 
 /**
  * @author khru
  */
-public class EjercicioAmarillo2 
+public class EjercicioAmarillo1 
 {
-
 	public static void main(String[] args) 
 	{
-			int vec[] = new int[20];
-			for(int i = 0;i < vec.length;i++)
+		Scanner teclado = new Scanner(System.in);
+		int vec[] = new int [10];
+		try
+		{
+			for(int i  = 0;i < vec.length;i++)
 			{
-				vec[i] = i * 5;
+				System.out.println("Introduce el valor que quieres que tenga la siguiente posición en el array: ");
+				vec[i] = teclado.nextInt();
 			}
-			for(int i = 0;i < vec.length;i++)
+			for (int i = 0;i < vec.length;i++)
 			{
-				System.out.println("El valor del array en la posición "+i+" es: "+vec[i]);
+				System.out.println("El valor de la posición "+i+" es: "+vec[i]);
 			}
+		}
+		catch(Exception Entero)
+		{
+			System.out.println("El parametro introducido no es correcto");
+		}
+		
+		teclado.close();
 	}
-
 }
