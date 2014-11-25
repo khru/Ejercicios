@@ -4,7 +4,7 @@
 package programación421;
 
 /**
- * @author Emmanuel Valverde Ramos
+ * @author khru
  */
 public class EjercicioAmarillo2 
 {
